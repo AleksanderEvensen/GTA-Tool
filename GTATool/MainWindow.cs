@@ -10,6 +10,55 @@ using System.Windows.Input;
 namespace GTATool {
     public partial class MainWindow : Form {
 
+        #region Form Buttons
+
+        //Reacts when mouse enters the button/picture box
+        private void btnExit_MouseEnter(object sender, EventArgs e)
+        {
+            //Changes the picture in the box
+            btnExit.Image = global::GTATool.Properties.Resources.xx;
+        }
+
+        //Reacts when mouse leaves the button/picture box
+        private void btnExit_MouseLeave(object sender, EventArgs e)
+        {
+            //Changes the picture in the box
+            btnExit.Image = global::GTATool.Properties.Resources.x;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        //Reacts when mouse enters the button/picture box
+        private void btnMin_MouseEnter(object sender, EventArgs e)
+        {
+            //Changes the picture in the box
+            btnMin.Image = global::GTATool.Properties.Resources.__;
+        }
+
+        //Reacts when mouse leaves the button/picture box
+        private void btnMin_MouseLeave(object sender, EventArgs e)
+        {
+            //Changes the picture in the box
+            btnMin.Image = global::GTATool.Properties.Resources._;
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        #endregion
+
         // This is the hotkey manager this will store all the hotkeys that is used in the program
         HotKeyManager hkManager;
 
@@ -29,6 +78,7 @@ namespace GTATool {
         // mouse thread
         Thread MouseThread;
 
+        
 
         public MainWindow() {
             InitializeComponent();
@@ -61,7 +111,7 @@ namespace GTATool {
 
             // Solo Public
             if(e.HotKey.Key == Key.L) {
-                if(spgEnabled) {
+                if(spgEnabled || isStartingSoloPublic == false) {
                     StartSoloPublic();
                 } else {
                     WriteLine("Solo public hotkey isn't enabled");
@@ -117,8 +167,6 @@ namespace GTATool {
             }
             
         }
-
-
 
 
         #region Solo Public Starter
@@ -224,7 +272,7 @@ namespace GTATool {
         // otherwise Write error to console
         private Process GetProcessStatus() {
             try {
-                Process[] myProcesses = Process.GetProcessesByName("GTA5");
+                Process[] myProcesses = Process.GetProcessesByName("Grand Theft Auto V");
 
                 if(myProcesses.Length > 0) {
                     WriteLine("GTA Process is running.");
@@ -278,9 +326,21 @@ namespace GTATool {
         #endregion
 
 
+        #region Console Writing
         // Writes a line to the console
         private void WriteLine(string line) {
             rText_console.Text += "  <GTATool> "+line + Environment.NewLine;
         }
+
+        //Automatically scrolls down to the last line in console
+        private void richTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // set the current caret position to the end
+            rText_console.SelectionStart = rText_console.Text.Length;
+            // scroll it automatically
+            rText_console.ScrollToCaret();
+        }
+
+        #endregion
     }
 }
