@@ -78,9 +78,9 @@
             this.btnMin.BackgroundImage = global::GTATool.Properties.Resources.x;
             this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnMin.Image = global::GTATool.Properties.Resources._;
-            this.btnMin.Location = new System.Drawing.Point(557, 4);
+            this.btnMin.Location = new System.Drawing.Point(577, 15);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(40, 40);
+            this.btnMin.Size = new System.Drawing.Size(20, 20);
             this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMin.TabIndex = 27;
             this.btnMin.TabStop = false;
@@ -94,9 +94,9 @@
             this.btnExit.BackgroundImage = global::GTATool.Properties.Resources.x;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnExit.Image = global::GTATool.Properties.Resources.x;
-            this.btnExit.Location = new System.Drawing.Point(603, 4);
+            this.btnExit.Location = new System.Drawing.Point(608, 15);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 40);
+            this.btnExit.Size = new System.Drawing.Size(20, 20);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnExit.TabIndex = 26;
             this.btnExit.TabStop = false;
@@ -131,7 +131,7 @@
             this.aw_enable.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.aw_enable.Location = new System.Drawing.Point(277, 90);
             this.aw_enable.Name = "aw_enable";
-            this.aw_enable.Rounded = false;
+            this.aw_enable.Rounded = true;
             this.aw_enable.Size = new System.Drawing.Size(74, 29);
             this.aw_enable.TabIndex = 25;
             this.aw_enable.Text = "Enable";
@@ -212,7 +212,7 @@
             this.af_enable.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.af_enable.Location = new System.Drawing.Point(16, 213);
             this.af_enable.Name = "af_enable";
-            this.af_enable.Rounded = false;
+            this.af_enable.Rounded = true;
             this.af_enable.Size = new System.Drawing.Size(74, 32);
             this.af_enable.TabIndex = 20;
             this.af_enable.Text = "Enable";
@@ -251,7 +251,7 @@
             this.spg_enable.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.spg_enable.Location = new System.Drawing.Point(16, 110);
             this.spg_enable.Name = "spg_enable";
-            this.spg_enable.Rounded = false;
+            this.spg_enable.Rounded = true;
             this.spg_enable.Size = new System.Drawing.Size(71, 32);
             this.spg_enable.TabIndex = 17;
             this.spg_enable.Text = "Enable";
@@ -286,6 +286,7 @@
             // 
             this.rText_console.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.rText_console.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rText_console.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.rText_console.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(131)))));
             this.rText_console.Location = new System.Drawing.Point(417, 54);
             this.rText_console.Name = "rText_console";
