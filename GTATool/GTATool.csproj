@@ -37,7 +37,7 @@
       <HintPath>..\packages\GlobalHotKey.1.1.0\lib\GlobalHotKey.dll</HintPath>
     </Reference>
     <Reference Include="SimpleUI">
-      <HintPath>..\..\..\..\Desktop\SimpleCodeUI\bin\Debug\SimpleUI.dll</HintPath>
+      <HintPath>./DLLs/SimpleUI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
