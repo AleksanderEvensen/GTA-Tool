@@ -26,6 +26,7 @@ namespace GTATool {
             btnExit.Image = global::GTATool.Properties.Resources.x;
         }
 
+        //This is the method that is called when you click the exit 
         private void btnExit_Click(object sender, EventArgs e)
         {
             try
@@ -52,6 +53,8 @@ namespace GTATool {
             btnMin.Image = global::GTATool.Properties.Resources._;
         }
 
+
+        // This method is called when you press the minimize button
         private void btnMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;

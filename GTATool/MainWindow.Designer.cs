@@ -129,6 +129,7 @@
             this.aw_enable.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.aw_enable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.aw_enable.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.aw_enable.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.aw_enable.Location = new System.Drawing.Point(277, 90);
             this.aw_enable.Name = "aw_enable";
             this.aw_enable.Rounded = true;
@@ -210,6 +211,7 @@
             this.af_enable.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.af_enable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.af_enable.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.af_enable.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.af_enable.Location = new System.Drawing.Point(16, 213);
             this.af_enable.Name = "af_enable";
             this.af_enable.Rounded = true;
@@ -249,6 +251,7 @@
             this.spg_enable.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.spg_enable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.spg_enable.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.spg_enable.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(101)))), ((int)(((byte)(143)))));
             this.spg_enable.Location = new System.Drawing.Point(16, 110);
             this.spg_enable.Name = "spg_enable";
             this.spg_enable.Rounded = true;
