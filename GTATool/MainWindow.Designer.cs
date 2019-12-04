@@ -24,6 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.formSkin1 = new SimpleCodeUIBeta.FormSkin();
+            this.btnMin = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new SimpleCodeUIBeta.FlatGroupBox();
             this.aw_enable = new SimpleCodeUIBeta.SimpleButton();
             this.simpleLabel7 = new SimpleCodeUIBeta.SimpleLabel();
@@ -38,12 +40,10 @@
             this.simpleLabel2 = new SimpleCodeUIBeta.SimpleLabel();
             this.simpleLabel1 = new SimpleCodeUIBeta.SimpleLabel();
             this.rText_console = new System.Windows.Forms.RichTextBox();
-            this.btnExit = new System.Windows.Forms.PictureBox();
-            this.btnMin = new System.Windows.Forms.PictureBox();
             this.formSkin1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // formSkin1
@@ -71,6 +71,38 @@
             this.formSkin1.Size = new System.Drawing.Size(646, 395);
             this.formSkin1.TabIndex = 14;
             this.formSkin1.Text = "formSkin1";
+            // 
+            // btnMin
+            // 
+            this.btnMin.BackColor = System.Drawing.Color.Transparent;
+            this.btnMin.BackgroundImage = global::GTATool.Properties.Resources.x;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMin.Image = global::GTATool.Properties.Resources._;
+            this.btnMin.Location = new System.Drawing.Point(557, 4);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(40, 40);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMin.TabIndex = 27;
+            this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            this.btnMin.MouseEnter += new System.EventHandler(this.btnMin_MouseEnter);
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImage = global::GTATool.Properties.Resources.x;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExit.Image = global::GTATool.Properties.Resources.x;
+            this.btnExit.Location = new System.Drawing.Point(603, 4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(40, 40);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit.TabIndex = 26;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
             // 
             // groupBox1
             // 
@@ -138,7 +170,7 @@
             this.simpleLabel5.ForeColor = System.Drawing.Color.White;
             this.simpleLabel5.Location = new System.Drawing.Point(24, 36);
             this.simpleLabel5.Name = "simpleLabel5";
-            this.simpleLabel5.Size = new System.Drawing.Size(251, 21);
+            this.simpleLabel5.Size = new System.Drawing.Size(215, 21);
             this.simpleLabel5.TabIndex = 22;
             this.simpleLabel5.Text = "Auto Walk (Hotkey: CTRL+F2)";
             // 
@@ -207,7 +239,7 @@
             this.simpleLabel3.ForeColor = System.Drawing.Color.White;
             this.simpleLabel3.Location = new System.Drawing.Point(12, 159);
             this.simpleLabel3.Name = "simpleLabel3";
-            this.simpleLabel3.Size = new System.Drawing.Size(239, 21);
+            this.simpleLabel3.Size = new System.Drawing.Size(203, 21);
             this.simpleLabel3.TabIndex = 18;
             this.simpleLabel3.Text = "Anti AFK (Hotkey: CTRL+F1)";
             // 
@@ -246,7 +278,7 @@
             this.simpleLabel1.ForeColor = System.Drawing.Color.White;
             this.simpleLabel1.Location = new System.Drawing.Point(12, 54);
             this.simpleLabel1.Name = "simpleLabel1";
-            this.simpleLabel1.Size = new System.Drawing.Size(316, 21);
+            this.simpleLabel1.Size = new System.Drawing.Size(280, 21);
             this.simpleLabel1.TabIndex = 15;
             this.simpleLabel1.Text = "Solo public generator(Hotkey: CTRL+L)";
             // 
@@ -257,43 +289,12 @@
             this.rText_console.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(158)))), ((int)(((byte)(131)))));
             this.rText_console.Location = new System.Drawing.Point(417, 54);
             this.rText_console.Name = "rText_console";
+            this.rText_console.ReadOnly = true;
             this.rText_console.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.rText_console.Size = new System.Drawing.Size(226, 338);
             this.rText_console.TabIndex = 14;
             this.rText_console.Text = "";
             this.rText_console.TextChanged += new System.EventHandler(this.richTextBox_TextChanged);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BackgroundImage = global::GTATool.Properties.Resources.x;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExit.Image = global::GTATool.Properties.Resources.x;
-            this.btnExit.Location = new System.Drawing.Point(603, 4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 40);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExit.TabIndex = 26;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            this.btnExit.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
-            this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
-            // 
-            // btnMin
-            // 
-            this.btnMin.BackColor = System.Drawing.Color.Transparent;
-            this.btnMin.BackgroundImage = global::GTATool.Properties.Resources.x;
-            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMin.Image = global::GTATool.Properties.Resources._;
-            this.btnMin.Location = new System.Drawing.Point(557, 4);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(40, 40);
-            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMin.TabIndex = 27;
-            this.btnMin.TabStop = false;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            this.btnMin.MouseEnter += new System.EventHandler(this.btnMin_MouseEnter);
-            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
             // 
             // MainWindow
             // 
@@ -311,10 +312,10 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.formSkin1.ResumeLayout(false);
             this.formSkin1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             this.ResumeLayout(false);
 
         }
