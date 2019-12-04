@@ -70,7 +70,7 @@
             this.formSkin1.Name = "formSkin1";
             this.formSkin1.Size = new System.Drawing.Size(646, 395);
             this.formSkin1.TabIndex = 14;
-            this.formSkin1.Text = "formSkin1";
+            this.formSkin1.Text = "Multitool for GTA";
             // 
             // btnMin
             // 

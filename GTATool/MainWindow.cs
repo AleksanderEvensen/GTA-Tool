@@ -77,7 +77,12 @@ namespace GTATool {
         bool isAntiAFKRunning = false;
         // mouse thread
         Thread MouseThread;
+        // Solo public thread
+        Thread SoloPublicThread;
 
+        //The gta process
+        Process GTAProcess;
+        
         
 
         public MainWindow() {
@@ -100,6 +105,7 @@ namespace GTATool {
 
             // This initialize a thread that is moving to mouse cursor(Used in ANTI-AFK)
             MouseThread = new Thread(new ThreadStart(MouseThreadFunction));
+            SoloPublicThread = new Thread(new ThreadStart(SoloPublicThreadMethod));
         }
 
 
@@ -237,7 +243,7 @@ namespace GTATool {
         public void StartSoloPublic() {
 
             // Get the gta process
-            Process GTAProcess = GetProcessStatus();
+            GTAProcess = GetProcessStatus();
 
 
             // if process is found do the code in between the blocks
@@ -245,17 +251,11 @@ namespace GTATool {
                 isStartingSoloPublic = true;
 
                 WriteLine("Creating Solo Public Session. This takes 10.5 seconds");
+                WriteLine("You will be in the solopublic lobby after the freeze");
+                SoloPublicThread.Start();
+                SoloPublicThread = new Thread(new ThreadStart(SoloPublicThreadMethod));
+
                 
-                // Suspend the gta process
-                SuspendProcess(GTAProcess);
-
-                // Wait for 10,5 seconds
-                Thread.Sleep(10500);
-
-                // Resume the process
-                ResumeProcess(GTAProcess);
-                // Write a sucess message to console
-                WriteLine("Solo Public created");
 
                 isStartingSoloPublic = false;
             
@@ -284,6 +284,21 @@ namespace GTATool {
                 return null;
             }
         }
+
+        public void SoloPublicThreadMethod() {
+
+            // Suspend the gta process
+            SuspendProcess(GTAProcess);
+
+            // Wait for 10,5 seconds
+            Thread.Sleep(10500);
+
+            // Resume the process
+            ResumeProcess(GTAProcess);
+        }
+                                        
+
+
         #endregion
 
 
@@ -308,6 +323,8 @@ namespace GTATool {
             }
         }
 
+        
+
         // this method is the loop for the Anti-AFK program
         // it will only move the cursor to the right
         public void MouseThreadFunction() {
@@ -327,7 +344,7 @@ namespace GTATool {
         #region Console Writing
         // Writes a line to the console
         private void WriteLine(string line) {
-            rText_console.Text += "  <GTATool> "+line + Environment.NewLine;
+            rText_console.Text += " <GTATool> "+line + Environment.NewLine;
         }
 
         //Automatically scrolls down to the last line in console
