@@ -89,11 +89,9 @@ namespace GTATool {
 
 
             // set the solo public hotkey to CTRL + ALT + L
-            soloPublicKey = hkManager.Register(Key.L, System.Windows.Input.ModifierKeys.Control 
-                                                    | System.Windows.Input.ModifierKeys.Alt);
+            soloPublicKey = hkManager.Register(Key.L, System.Windows.Input.ModifierKeys.Control);
             // set the ANTI-AFK hotkey to CTRL + ALT + F1
-            afkKey = hkManager.Register(Key.F1, System.Windows.Input.ModifierKeys.Control
-                                              | System.Windows.Input.ModifierKeys.Alt);
+            afkKey = hkManager.Register(Key.F1, System.Windows.Input.ModifierKeys.Control);
 
 
             // Adding the medthod to call when the hotkeys are pressed.
@@ -272,7 +270,7 @@ namespace GTATool {
         // otherwise Write error to console
         private Process GetProcessStatus() {
             try {
-                Process[] myProcesses = Process.GetProcessesByName("Grand Theft Auto V");
+                Process[] myProcesses = Process.GetProcessesByName("GTA5");
 
                 if(myProcesses.Length > 0) {
                     WriteLine("GTA Process is running.");
