@@ -140,7 +140,7 @@
             this.simpleLabel5.Name = "simpleLabel5";
             this.simpleLabel5.Size = new System.Drawing.Size(251, 21);
             this.simpleLabel5.TabIndex = 22;
-            this.simpleLabel5.Text = "Auto Walk (Hotkey: CTRL+ALT+F2)";
+            this.simpleLabel5.Text = "Auto Walk (Hotkey: CTRL+F2)";
             // 
             // textBox2
             // 
@@ -209,7 +209,7 @@
             this.simpleLabel3.Name = "simpleLabel3";
             this.simpleLabel3.Size = new System.Drawing.Size(239, 21);
             this.simpleLabel3.TabIndex = 18;
-            this.simpleLabel3.Text = "Anti AFK (Hotkey: CTRL+ALT+F1)";
+            this.simpleLabel3.Text = "Anti AFK (Hotkey: CTRL+F1)";
             // 
             // spg_enable
             // 
@@ -248,7 +248,7 @@
             this.simpleLabel1.Name = "simpleLabel1";
             this.simpleLabel1.Size = new System.Drawing.Size(316, 21);
             this.simpleLabel1.TabIndex = 15;
-            this.simpleLabel1.Text = "Solo public generator(Hotkey: CTRL+ALT+L)";
+            this.simpleLabel1.Text = "Solo public generator(Hotkey: CTRL+L)";
             // 
             // rText_console
             // 
